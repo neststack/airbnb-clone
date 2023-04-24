@@ -4,10 +4,15 @@ import Container from '../Container';
 import Logo from './Logo';
 import Search from './Search';
 import UserMenu from './UserMenu';
+import { SafeUser } from '@/app/types';
 
-type Props = {};
+interface NavbarProps {
+  currentUser?: SafeUser | null;
+}
 
-const Navbar = (props: Props) => {
+const Navbar: React.FC<NavbarProps> = (props) => {
+  const { currentUser } = props;
+  console.log(currentUser);
   return (
     <div
       className="
@@ -34,7 +39,7 @@ const Navbar = (props: Props) => {
           >
             <Logo />
             <Search />
-            <UserMenu />
+            <UserMenu currentUser={currentUser} />
           </div>
         </Container>
       </div>

@@ -17,19 +17,18 @@ interface ModelProps {
   secondaryActionLabel?: string;
 }
 
-const Modal: React.FC<ModelProps> = (props) => {
-  const {
-    isOpen,
-    onClose,
-    onSubmit,
-    title,
-    body,
-    footer,
-    actionLabel,
-    disabled,
-    secondaryAction,
-    secondaryActionLabel,
-  } = props;
+const Modal: React.FC<ModelProps> = ({
+  isOpen,
+  onClose,
+  onSubmit,
+  title,
+  body,
+  footer,
+  actionLabel,
+  disabled,
+  secondaryAction,
+  secondaryActionLabel,
+}) => {
   const [showModal, setShowModal] = useState(isOpen);
 
   useEffect(() => {

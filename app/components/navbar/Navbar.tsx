@@ -11,9 +11,7 @@ interface NavbarProps {
   currentUser?: SafeUser | null;
 }
 
-const Navbar: React.FC<NavbarProps> = (props) => {
-  const { currentUser } = props;
-  console.log(currentUser);
+const Navbar: React.FC<NavbarProps> = ({ currentUser }) => {
   return (
     <div
       className="

@@ -1,7 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   experimental: {
+    modern: true,
+    modularize: true,
     appDir: true,
+    dynamicImports: true,
+    css: true,
   },
   images: {
     domains: [

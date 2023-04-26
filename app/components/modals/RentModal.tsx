@@ -199,7 +199,7 @@ const RentModal = () => {
         />
         <ImageUpload
           value={imageSrc}
-          onChange={(value) => setCustomValue('imageSrd', value)}
+          onChange={(value) => setCustomValue('imageSrc', value)}
         />
       </div>
     );
